@@ -10,6 +10,11 @@ public class LinkedList {
 		this.head = newNode;
 	}
 	
+	//O(1) to delete the Head
+	public void deleteHead() {
+		this.head = this.head.getNextNode();
+	}
+	
 	public int length() {
 		Node current = this.head;
 		int counter = 0;
