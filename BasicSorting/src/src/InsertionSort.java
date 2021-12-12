@@ -11,9 +11,10 @@ public class InsertionSort {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[] list = {5, 2, 8, 12, 7};
-		for(int i = 1; i<list.length; i++) {
+		for(int i = 0; i<list.length; i++) {
 			int current = list[i];
 			int j = i-1;
+			//This is Stable sort because we don't change the elements even if they are equal.
 			while(j >= 0 && list[j]>current) {
 				list[j+1] = list[j];
 				j--;
