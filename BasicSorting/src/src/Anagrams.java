@@ -2,6 +2,7 @@ package src;
 
 public class Anagrams {
 	
+	//We use an Insertion Sort to sort the array making it O(n2) 
 	public static void sortArray(char[] array) {
 		for(int i = 0; i<array.length; i++) {
 			int current = (int) array[i];
