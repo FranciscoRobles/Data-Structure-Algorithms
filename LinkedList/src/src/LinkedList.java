@@ -25,6 +25,18 @@ public class LinkedList {
 		}
 		return counter;
 	}
+	
+	//O(n)
+	public Node search(int data) {
+		Node current = this.head;
+		while(current != null) {
+			if(current.getData() == data) {
+				return current;
+			}
+			current = current.getNextNode();
+		}
+		return null;
+	}
 
 	@Override
 	public String toString() {
