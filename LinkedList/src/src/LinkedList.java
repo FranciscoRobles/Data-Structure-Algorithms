@@ -4,8 +4,8 @@ public class LinkedList {
 	
 	private Node head;
 	
-	public void insertAtHead(int data) {
-		Node newNode = new Node(data);
+	public <T> void insertAtHead(T data) {
+		Node<T> newNode = new Node<T>(data);
 		newNode.setNextNode(this.head);
 		this.head = newNode;
 	}
@@ -27,7 +27,7 @@ public class LinkedList {
 	}
 	
 	//O(n)
-	public Node search(int data) {
+	public <T> Node<T> search(T data) {
 		Node current = this.head;
 		while(current != null) {
 			if(current.getData() == data) {
