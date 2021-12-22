@@ -16,7 +16,6 @@ public class Stack {
 	
 	public static int pop() {
 		int popped = array[top];
-		array[top] = 0;
 		top--;
 		return popped;
 	}
