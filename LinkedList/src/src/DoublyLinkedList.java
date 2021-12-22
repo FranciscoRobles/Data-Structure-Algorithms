@@ -26,6 +26,28 @@ public class DoublyLinkedList {
 		return length;
 	}
 	
+	public void insertionSort() {
+		DoublyLinkedNode<Integer> current = this.head;
+		DoublyLinkedNode<Integer> compare = null;
+		//System.out.println("Current: " + current);
+		while(current != null) {
+			compare = current.getNext();
+			System.out.println("Compare: " + compare);
+			while(compare != null && 
+					compare.getData() < current.getData()) {
+				int next = compare.getData();
+				System.out.println("Next:" + next);
+				compare.setData(current.getData());
+				current.setData(next);
+				compare = current;
+				System.out.println("Compare after value: " + compare);
+				
+			}
+			current = current.getNext();
+			//System.out.println("Current after next: " + current);
+		}
+	}
+	
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
