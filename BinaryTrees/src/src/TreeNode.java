@@ -32,7 +32,7 @@ public class TreeNode {
 	}
 	
 	public TreeNode find(int data) {
-		if(this.data == data) {
+		if(this.data == data && !this.isDeleted) {
 			return this;
 		}
 		if(data > this.data && this.rightChild != null) {
@@ -70,5 +70,19 @@ public class TreeNode {
 	
 	public boolean isDeleted() {
 		return this.isDeleted;
+	}
+	
+	public int smallest() {
+		if(this.leftChild == null) {
+			return this.data;
+		}
+		return this.leftChild.smallest();
+	}
+	
+	public int largest() {
+		if(this.rightChild == null) {
+			return this.data;
+		}
+		return this.rightChild.largest();
 	}
 }

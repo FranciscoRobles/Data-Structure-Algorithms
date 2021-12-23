@@ -89,9 +89,19 @@ public class BinarySearchTree {
 //		//Case 3: Node has 2 childs - It's too complicated, so we will use Soft Delete
 //		
 //	}
-
-	public static void main(String[] args) {
-		System.out.println("The element doesn't exist");
+	
+	public int smallest() {
+		if(this.rootNode != null) {
+			return this.rootNode.smallest();
+		}
+		return (Integer) null;
+	}
+	
+	public int largest() {
+		if(this.rootNode != null) {
+			return this.rootNode.largest();
+		}
+		return (Integer) null;
 	}
 
 }
