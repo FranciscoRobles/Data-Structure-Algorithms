@@ -109,12 +109,37 @@ public class BinarySearchTree {
 			return;
 		}
 		if(this.rootNode.getLeftChild() != null) {
-			this.rootNode.traverseLeftSubTree();
+			this.rootNode.inOrderTraverse();
 		}
 		else if(this.rootNode.getRightChild() != null) {
-			this.rootNode.traverseLeftSubTree();
+			this.rootNode.inOrderTraverse();
 		}
 		System.out.println();
 	}
 
+	public void preOrder() {
+		if(this.rootNode == null) {
+			return;
+		}
+		if(this.rootNode.getLeftChild() != null) {
+			this.rootNode.preOrderTraverse();
+		}
+		else if(this.rootNode.getRightChild() != null) {
+			this.rootNode.preOrderTraverse();
+		}
+		System.out.println();
+	}
+	
+	public void postOrder() {
+		if(this.rootNode == null) {
+			return;
+		}
+		if(this.rootNode.getLeftChild() != null) {
+			this.rootNode.postOrderTraverse();
+		}
+		else if(this.rootNode.getRightChild() != null) {
+			this.rootNode.postOrderTraverse();
+		}
+		System.out.println();
+	}
 }

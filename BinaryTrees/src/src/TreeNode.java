@@ -86,13 +86,33 @@ public class TreeNode {
 		return this.rightChild.largest();
 	}
 
-	public void traverseLeftSubTree() {
+	public void inOrderTraverse() {
 		if(this.leftChild != null) {
-			this.leftChild.traverseLeftSubTree();
+			this.leftChild.inOrderTraverse();
 		}
 		System.out.print(this.getData()+"-");
 		if(this.rightChild != null) {
-			this.rightChild.traverseLeftSubTree();
+			this.rightChild.inOrderTraverse();
 		}
+	}
+	
+	public void preOrderTraverse() {
+		System.out.print(this.getData()+"-");
+		if(this.leftChild != null) {
+			this.leftChild.preOrderTraverse();
+		}
+		if(this.rightChild != null) {
+			this.rightChild.preOrderTraverse();
+		}
+	}
+	
+	public void postOrderTraverse() {
+		if(this.leftChild != null) {
+			this.leftChild.postOrderTraverse();
+		}
+		if(this.rightChild != null) {
+			this.rightChild.postOrderTraverse();
+		}
+		System.out.print(this.getData()+"-");
 	}
 }

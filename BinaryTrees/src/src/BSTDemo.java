@@ -12,6 +12,8 @@ public class BSTDemo {
 		bst.insertNode(42);
 		bst.insertNode(65);
 		bst.inOrder();
+		bst.preOrder();
+		bst.postOrder();
 		bst.findNode(20);
 		bst.findNode(60);
 
