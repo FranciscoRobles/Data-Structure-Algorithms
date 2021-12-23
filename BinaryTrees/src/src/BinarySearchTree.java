@@ -103,5 +103,18 @@ public class BinarySearchTree {
 		}
 		return (Integer) null;
 	}
+	
+	public void inOrder() {
+		if(this.rootNode == null) {
+			return;
+		}
+		if(this.rootNode.getLeftChild() != null) {
+			this.rootNode.traverseLeftSubTree();
+		}
+		else if(this.rootNode.getRightChild() != null) {
+			this.rootNode.traverseLeftSubTree();
+		}
+		System.out.println();
+	}
 
 }

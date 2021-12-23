@@ -9,7 +9,9 @@ public class BSTDemo {
 		bst.insertNode(30);
 		bst.insertNode(78);
 		bst.insertNode(60);
-		System.out.println();
+		bst.insertNode(42);
+		bst.insertNode(65);
+		bst.inOrder();
 		bst.findNode(20);
 		bst.findNode(60);
 

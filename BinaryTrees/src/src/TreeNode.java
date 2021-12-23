@@ -85,4 +85,14 @@ public class TreeNode {
 		}
 		return this.rightChild.largest();
 	}
+
+	public void traverseLeftSubTree() {
+		if(this.leftChild != null) {
+			this.leftChild.traverseLeftSubTree();
+		}
+		System.out.print(this.getData()+"-");
+		if(this.rightChild != null) {
+			this.rightChild.traverseLeftSubTree();
+		}
+	}
 }
